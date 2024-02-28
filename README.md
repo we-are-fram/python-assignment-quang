@@ -1,5 +1,32 @@
 # app
 # Project Name: App
+## Project Structure
+The project has the following structure:
+
+```
+app/
+│
+├── config/                    # Config project
+├── app/                      # Each application you write in Django will consist of a Python package that follows a certain convention
+│   ├── accounts/            # Contain the entities an repository of Acccount
+│   |   ├── managers/              # Contain the implemementation of repository interfaces 
+│   |   ├── migrations/            # Directory for database migration files
+│   |   ├── models/              # Defines the entities Account
+│   |   ├── tests.py               # contain the unit test
+│   |   └── ...
+│   |── customer/            # Contain the entities an repository of Customer
+│   |   ├── migrations/            # Directory for database migration files
+│   |   ├── models/              # Defines the entities Customer
+│   |   └── ...
+│   ├── usecase/            # contain the use case of the system
+    |   └── ...                 # handle usecase
+│   └── ...
+│
+├── Makefile                   # Makefie contain command
+├── manage.py                  # Django's command-line utility for administrative tasks
+├── README.md                  # Project overview and instructions
+└── ....
+```
 
 ## Description
 Provide a brief description of what your project does and the problem it solves.
